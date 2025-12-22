@@ -30,6 +30,7 @@ export const useDataTableData = <T extends Record<string, unknown>>({
   const [internalData, setInternalData] = useState<T[]>(dataSource ?? [])
   const [internalLoading, setInternalLoading] = useState(false)
   const [total, setTotal] = useState<number | undefined>()
+  // 用请求序号避免异步响应乱序覆盖
   const requestIdRef = useRef(0)
 
   const refresh = useCallback(async () => {
