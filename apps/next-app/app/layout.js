@@ -1,15 +1,10 @@
 import "./globals.css";
 
-export const metadata = {
-  title: "Web",
-  description: "Next.js app in a monorepo."
-};
-
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="zh-CN">
       <body>
-        <main className="container">{children}</main>
+        <main className="page">{children}</main>
       </body>
     </html>
   );

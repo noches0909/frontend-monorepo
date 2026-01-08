@@ -1,0 +1,79 @@
+{
+  "site": {
+    "name": "Stellar Frontend Cloud",
+    "tagline": "A calmer way to run multi-product delivery",
+    "nav": [
+      { "label": "Product", "href": "#features" },
+      { "label": "Workflow", "href": "#workflow" },
+      { "label": "Impact", "href": "#story" },
+      { "label": "Contact", "href": "#cta" }
+    ]
+  },
+  "language": {
+    "label": "Select language",
+    "options": {
+      "zh": "中文",
+      "en": "English"
+    }
+  },
+  "hero": {
+    "badge": "Public preview",
+    "title": "A collaboration engine for modern frontend teams",
+    "subtitle": "Unify design, build, release, and insights into one shared cadence.",
+    "primaryCta": "Book a demo",
+    "secondaryCta": "Read docs",
+    "previewTitle": "Live delivery console",
+    "previewItems": [
+      { "label": "Active squads", "value": "12" },
+      { "label": "Release lanes", "value": "Ready" },
+      { "label": "Experience score", "value": "A+" }
+    ]
+  },
+  "stats": [
+    { "value": "3x", "label": "Faster builds" },
+    { "value": "40%", "label": "Shorter delivery cycles" },
+    { "value": "99.9%", "label": "Release stability" }
+  ],
+  "sections": {
+    "featuresTitle": "Confidence in every launch",
+    "featuresSubtitle": "Plan, ship, and learn from a single view.",
+    "workflowTitle": "One line from design to release",
+    "workflowBody": "Connect requests, components, builds, and releases in a traceable flow.",
+    "storyTitle": "Built for scaling teams",
+    "storyBody": "See the impact of every release and iterate faster with shared context.",
+    "ctaTitle": "Make your frontend the HQ",
+    "ctaBody": "Align product rhythm and collaboration with one workspace.",
+    "ctaButton": "Get the playbook"
+  },
+  "features": [
+    {
+      "title": "Unified design language",
+      "description": "Components and themes stay aligned across teams."
+    },
+    {
+      "title": "Smart pipelines",
+      "description": "Automated builds, tests, and previews with confidence."
+    },
+    {
+      "title": "Observable experience",
+      "description": "Performance and conversion insights stay visible."
+    }
+  ],
+  "workflow": [
+    {
+      "step": "Design sync",
+      "detail": "Share components, align specs, reduce rework."
+    },
+    {
+      "step": "Build orchestration",
+      "detail": "Resources auto-allocated to cut waiting time."
+    },
+    {
+      "step": "Release preview",
+      "detail": "Multi-env reviews are clear and fast."
+    }
+  ],
+  "footer": {
+    "note": "(c) 2024 Stellar Frontend Cloud - Built for fast-moving teams"
+  }
+}

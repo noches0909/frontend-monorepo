@@ -1,0 +1,70 @@
+{
+  "site": {
+    "name": "星河前端云",
+    "tagline": "把多项目协作变成一件轻松的事",
+    "nav": [
+      { "label": "产品", "href": "#features" },
+      { "label": "流程", "href": "#workflow" },
+      { "label": "价值", "href": "#story" },
+      { "label": "联系", "href": "#cta" }
+    ]
+  },
+  "language": {
+    "label": "选择语言",
+    "options": {
+      "zh": "中文",
+      "en": "English"
+    }
+  },
+  "hero": {
+    "badge": "公测进行中",
+    "title": "为现代前端团队打造的协作引擎",
+    "subtitle": "统一设计、构建、发布与观测，把跨团队协作缩短到一个节奏。",
+    "primaryCta": "预约演示",
+    "secondaryCta": "查看文档",
+    "previewTitle": "实时协作面板",
+    "previewItems": [
+      { "label": "活跃团队", "value": "12" },
+      { "label": "发布通道", "value": "已就绪" },
+      { "label": "体验分数", "value": "A+" }
+    ]
+  },
+  "stats": [
+    { "value": "3x", "label": "构建速度提升" },
+    { "value": "40%", "label": "交付周期缩短" },
+    { "value": "99.9%", "label": "持续交付稳定性" }
+  ],
+  "sections": {
+    "featuresTitle": "让每一次上线都更确定",
+    "featuresSubtitle": "从规划到上线，全链路可见。",
+    "workflowTitle": "从设计到发布的一条线",
+    "workflowBody": "把需求、组件、构建和发布连接到一个可追踪的流程里。",
+    "storyTitle": "为增长团队而生",
+    "storyBody": "你可以在一个仪表盘中看到每次上线的影响，快速复盘与迭代。",
+    "ctaTitle": "开始打造你的前端总部",
+    "ctaBody": "把产品节奏统一起来，让协作更轻、更快。",
+    "ctaButton": "获取方案"
+  },
+  "features": [
+    {
+      "title": "统一设计语言",
+      "description": "组件与主题集中管理，品牌视觉始终一致。"
+    },
+    {
+      "title": "智能流水线",
+      "description": "构建、测试、预览自动化，发布更安心。"
+    },
+    {
+      "title": "体验可观测",
+      "description": "性能、转化、错误一目了然，问题更快闭环。"
+    }
+  ],
+  "workflow": [
+    { "step": "设计协作", "detail": "共享组件、对齐规范、减少返工。" },
+    { "step": "构建排程", "detail": "资源自动分配，缩短等待时间。" },
+    { "step": "发布预览", "detail": "多环境对比，审阅更直观。" }
+  ],
+  "footer": {
+    "note": "(c) 2024 星河前端云 - 面向高速增长团队"
+  }
+}
