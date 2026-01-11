@@ -33,25 +33,6 @@ importers:
         specifier: ^14.2.4
         version: 14.2.35(eslint@8.57.1)(typescript@5.9.3)
 
-  apps/web:
-    dependencies:
-      next:
-        specifier: ^14.2.4
-        version: 14.2.35(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react:
-        specifier: ^18.2.0
-        version: 18.3.1
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.3.1(react@18.3.1)
-    devDependencies:
-      eslint:
-        specifier: ^8.57.0
-        version: 8.57.1
-      eslint-config-next:
-        specifier: ^14.2.4
-        version: 14.2.35(eslint@8.57.1)(typescript@5.9.3)
-
 packages:
 
   '@emnapi/core@1.8.1':

@@ -12,13 +12,10 @@ export default function HomeContent({ zhCopy, enCopy }) {
   const [locale, setLocale] = useState(LOCALE_ZH);
 
   useEffect(() => {
-    const storedLocale = getStoredLocale();
+    setLocale(getStoredLocale());
+  }, []);
 
-    if (storedLocale !== locale) {
-      setLocale(storedLocale);
-      return;
-    }
-
+  useEffect(() => {
     setLocaleCookie(locale);
   }, [locale]);
 
