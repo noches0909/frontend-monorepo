@@ -10,6 +10,9 @@ const DEFAULT_LOCALE = LOCALE_ZH;
 const COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
 const COOKIE_OPTIONS = `Path=/; Max-Age=${COOKIE_MAX_AGE}; SameSite=Lax`;
 
+export const normalizeLocale = (value: string | null | undefined) =>
+  value && SUPPORTED_LOCALES.has(value) ? value : DEFAULT_LOCALE;
+
 const getCookieValue = (name: string) => {
   if (typeof document === "undefined") {
     return null;
@@ -28,13 +31,7 @@ const getCookieValue = (name: string) => {
 };
 
 export const getStoredLocale = () => {
-  const value = getCookieValue(LOCALE_COOKIE_NAME);
-
-  if (value && SUPPORTED_LOCALES.has(value)) {
-    return value;
-  }
-
-  return DEFAULT_LOCALE;
+  return normalizeLocale(getCookieValue(LOCALE_COOKIE_NAME));
 };
 
 export const setLocaleCookie = (value: string) => {
@@ -42,7 +39,7 @@ export const setLocaleCookie = (value: string) => {
     return;
   }
 
-  const normalized = SUPPORTED_LOCALES.has(value) ? value : DEFAULT_LOCALE;
+  const normalized = normalizeLocale(value);
   document.cookie = `${LOCALE_COOKIE_NAME}=${encodeURIComponent(
     normalized
   )}; ${COOKIE_OPTIONS}`;

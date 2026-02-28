@@ -2,18 +2,13 @@
 
 import { useEffect, useState } from "react";
 import {
-  getStoredLocale,
   setLocaleCookie,
   LOCALE_EN,
   LOCALE_ZH
 } from "../lib/home-copy";
 
-export default function HomeContent({ zhCopy, enCopy }) {
-  const [locale, setLocale] = useState(LOCALE_ZH);
-
-  useEffect(() => {
-    setLocale(getStoredLocale());
-  }, []);
+export default function HomeContent({ zhCopy, enCopy, initialLocale }) {
+  const [locale, setLocale] = useState(initialLocale ?? LOCALE_ZH);
 
   useEffect(() => {
     setLocaleCookie(locale);

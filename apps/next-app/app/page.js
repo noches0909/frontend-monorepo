@@ -1,5 +1,6 @@
 import HomeContent from "./components/home-content";
-import { getHomeCopy } from "./lib/home-copy";
+import { cookies } from "next/headers";
+import { getHomeCopy, LOCALE_COOKIE_NAME, normalizeLocale } from "./lib/home-copy";
 
 const { zhCopy, enCopy } = getHomeCopy();
 
@@ -8,6 +9,11 @@ export const metadata = {
   description: zhCopy.hero.subtitle
 };
 
-export default function Home() {
-  return <HomeContent zhCopy={zhCopy} enCopy={enCopy} />;
+export default async function Home() {
+  const cookieStore = await cookies();
+  const initialLocale = normalizeLocale(cookieStore.get(LOCALE_COOKIE_NAME)?.value);
+
+  return (
+    <HomeContent zhCopy={zhCopy} enCopy={enCopy} initialLocale={initialLocale} />
+  );
 }
