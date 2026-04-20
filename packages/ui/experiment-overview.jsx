@@ -1,10 +1,10 @@
 "use client";
 
-import { Card, Col, List, Row, Space, Tag, Typography } from "antd";
+import { Card, Col, Row, Space, Tag, Typography } from "antd";
 
 export function ExperimentOverview({ blueprint, projects }) {
   return (
-    <Space direction="vertical" size={24} className="experiment-overview">
+    <Space orientation="vertical" size={24} className="experiment-overview">
       <section className="experiment-overview__hero">
         <span className="experiment-overview__eyebrow">{blueprint.versionLabel}</span>
         <Typography.Title level={1}>{blueprint.name}</Typography.Title>
@@ -23,18 +23,18 @@ export function ExperimentOverview({ blueprint, projects }) {
         {projects.map((project) => (
           <Col xs={24} lg={12} key={project.id}>
             <Card className="experiment-overview__card" title={project.title}>
-              <Space direction="vertical" size={12} className="experiment-overview__stack">
+              <Space orientation="vertical" size={12} className="experiment-overview__stack">
                 <Space wrap>
                   <Tag color="geekblue">{project.packageName}</Tag>
                   <Tag color="green">{project.status}</Tag>
                 </Space>
                 <Typography.Paragraph>{project.summary}</Typography.Paragraph>
                 <Typography.Text type="secondary">{project.stack}</Typography.Text>
-                <List
-                  size="small"
-                  dataSource={project.features}
-                  renderItem={(feature) => <List.Item>{feature}</List.Item>}
-                />
+                <ul className="experiment-overview__list">
+                  {project.features.map((feature) => (
+                    <li key={feature}>{feature}</li>
+                  ))}
+                </ul>
               </Space>
             </Card>
           </Col>

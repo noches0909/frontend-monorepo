@@ -1,3 +1,11 @@
 .panel-stack {
   width: 100%;
 }
+
+.slider-captcha-page {
+  width: 100%;
+}
+
+.slider-captcha-panel {
+  min-height: 180px;
+}

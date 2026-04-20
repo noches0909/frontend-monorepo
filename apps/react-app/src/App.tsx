@@ -10,11 +10,16 @@ import {
 import { productBlueprint, projectCatalog } from "@acme/experiment-catalog";
 import { BrowserRouter, Link, Route, Routes, useLocation } from "react-router-dom";
 import ModelComparison from "./components/ModelComparison";
+import SliderCaptchaComparisonPage from "./components/slider-captcha-comparison/SliderCaptchaComparisonPage";
 import "./App.css";
 
 const menuItems = [
   { key: "/", label: <Link to="/">实验总览</Link> },
   { key: "/model-comparison", label: <Link to="/model-comparison">模型对比实验</Link> },
+  {
+    key: "/slider-captcha-comparison",
+    label: <Link to="/slider-captcha-comparison">滑动验证码对比实验</Link>
+  },
   { key: "/roadmap", label: <Link to="/roadmap">版本路线</Link> }
 ] satisfies MenuProps["items"];
 
@@ -30,9 +35,9 @@ function ModelComparisonPage() {
   }
 
   return (
-    <Space direction="vertical" size={24} className="panel-stack">
+    <Space orientation="vertical" size={24} className="panel-stack">
       <Card className="catalog-card">
-        <Space direction="vertical" size={8} className="panel-stack">
+        <Space orientation="vertical" size={8} className="panel-stack">
           <Typography.Title level={2}>{reactProject.title}</Typography.Title>
           <Typography.Paragraph>{reactProject.liveExperience}</Typography.Paragraph>
           <Typography.Text type="secondary">{reactProject.nextStep}</Typography.Text>
@@ -69,6 +74,10 @@ function AppFrame() {
         <Routes>
           <Route path="/" element={<OverviewPage />} />
           <Route path="/model-comparison" element={<ModelComparisonPage />} />
+          <Route
+            path="/slider-captcha-comparison"
+            element={<SliderCaptchaComparisonPage />}
+          />
           <Route path="/roadmap" element={<RoadmapPage />} />
         </Routes>
     </ExperimentWorkbench>

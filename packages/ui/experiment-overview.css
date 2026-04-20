@@ -38,3 +38,27 @@
 .experiment-overview__stack {
   width: 100%;
 }
+
+.experiment-overview__list {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: #4f5d79;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.experiment-overview__list li {
+  line-height: 1.55;
+}
+
+.roadmap-panel__list {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: #4f5d79;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.roadmap-panel__list li {
+  line-height: 1.6;
+}
