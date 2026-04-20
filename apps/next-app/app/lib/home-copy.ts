@@ -4,6 +4,7 @@ import enCopy from "../../enMock.json";
 export const LOCALE_COOKIE_NAME = "locale";
 export const LOCALE_ZH = "zh-CN";
 export const LOCALE_EN = "en-US";
+export type HomeCopy = typeof zhCopy;
 
 const SUPPORTED_LOCALES = new Set([LOCALE_ZH, LOCALE_EN]);
 const DEFAULT_LOCALE = LOCALE_ZH;
@@ -46,6 +47,6 @@ export const setLocaleCookie = (value: string) => {
 };
 
 export const getHomeCopy = () => ({
-  zhCopy,
-  enCopy
+  zhCopy: zhCopy as HomeCopy,
+  enCopy: enCopy as HomeCopy
 });

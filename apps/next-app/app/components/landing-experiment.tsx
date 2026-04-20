@@ -1,13 +1,21 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import {
-  setLocaleCookie,
-  LOCALE_EN,
-  LOCALE_ZH
-} from "../lib/home-copy";
+import type { CSSProperties } from "react";
+import type { HomeCopy } from "../lib/home-copy";
+import { LOCALE_EN, LOCALE_ZH, setLocaleCookie } from "../lib/home-copy";
 
-export default function HomeContent({ zhCopy, enCopy, initialLocale }) {
+type LandingExperimentProps = {
+  zhCopy: HomeCopy;
+  enCopy: HomeCopy;
+  initialLocale: string;
+};
+
+export default function LandingExperiment({
+  zhCopy,
+  enCopy,
+  initialLocale
+}: LandingExperimentProps) {
   const [locale, setLocale] = useState(initialLocale ?? LOCALE_ZH);
 
   useEffect(() => {
@@ -30,11 +38,7 @@ export default function HomeContent({ zhCopy, enCopy, initialLocale }) {
             </a>
           ))}
         </nav>
-        <div
-          className="lang-switch"
-          role="group"
-          aria-label={copy.language.label}
-        >
+        <div className="lang-switch" role="group" aria-label={copy.language.label}>
           <button
             type="button"
             className={locale === LOCALE_ZH ? "active" : ""}
@@ -54,7 +58,7 @@ export default function HomeContent({ zhCopy, enCopy, initialLocale }) {
         </div>
       </header>
 
-      <section className="hero reveal" style={{ "--delay": "120ms" }}>
+      <section className="hero reveal" style={{ "--delay": "120ms" } as CSSProperties}>
         <div className="hero__content">
           <span className="hero__badge">{copy.hero.badge}</span>
           <h1>{copy.hero.title}</h1>
@@ -83,7 +87,7 @@ export default function HomeContent({ zhCopy, enCopy, initialLocale }) {
         </aside>
       </section>
 
-      <section className="stats reveal" style={{ "--delay": "220ms" }}>
+      <section className="stats reveal" style={{ "--delay": "220ms" } as CSSProperties}>
         {copy.stats.map((item) => (
           <div className="stat" key={item.label}>
             <span className="stat__value">{item.value}</span>
@@ -95,7 +99,7 @@ export default function HomeContent({ zhCopy, enCopy, initialLocale }) {
       <section
         className="features reveal"
         id="features"
-        style={{ "--delay": "320ms" }}
+        style={{ "--delay": "320ms" } as CSSProperties}
       >
         <div className="section-head">
           <h2>{copy.sections.featuresTitle}</h2>
@@ -114,7 +118,7 @@ export default function HomeContent({ zhCopy, enCopy, initialLocale }) {
       <section
         className="workflow reveal"
         id="workflow"
-        style={{ "--delay": "420ms" }}
+        style={{ "--delay": "420ms" } as CSSProperties}
       >
         <div className="section-head">
           <h2>{copy.sections.workflowTitle}</h2>
@@ -133,7 +137,7 @@ export default function HomeContent({ zhCopy, enCopy, initialLocale }) {
       <section
         className="story reveal"
         id="story"
-        style={{ "--delay": "520ms" }}
+        style={{ "--delay": "520ms" } as CSSProperties}
       >
         <div className="story-card">
           <h2>{copy.sections.storyTitle}</h2>
@@ -141,7 +145,7 @@ export default function HomeContent({ zhCopy, enCopy, initialLocale }) {
         </div>
       </section>
 
-      <section className="cta reveal" id="cta" style={{ "--delay": "620ms" }}>
+      <section className="cta reveal" id="cta" style={{ "--delay": "620ms" } as CSSProperties}>
         <div className="cta-card">
           <div>
             <h2>{copy.sections.ctaTitle}</h2>

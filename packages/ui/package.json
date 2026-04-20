@@ -1,0 +1,29 @@
+{
+  "name": "@acme/ui",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    },
+    "./experiment-overview.css": {
+      "default": "./experiment-overview.css"
+    },
+    "./experiment-workbench.css": {
+      "default": "./experiment-workbench.css"
+    },
+    "./reset.css": {
+      "types": "./reset.d.ts",
+      "default": "./reset.css"
+    }
+  },
+  "dependencies": {
+    "antd": "^6.3.1"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}

@@ -1,4 +1,4 @@
-# frontend-monorepo
+# monorepo-lab
 
 前端多应用 Monorepo（`pnpm workspaces`），当前包含：
 

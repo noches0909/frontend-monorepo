@@ -1,4 +1,4 @@
-# frontend-monorepo 项目文档
+# monorepo-lab 项目文档
 
 ## 1. 项目概览
 
@@ -12,7 +12,7 @@
 ## 2. 工作区结构
 
 ```text
-frontend-monorepo/
+monorepo-lab/
 ├── apps/
 │   ├── next-app/    # Next.js 应用
 │   └── react-app/   # Vite + React 应用

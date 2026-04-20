@@ -1,19 +1,18 @@
 :root {
   color-scheme: light;
-  --bg: #f3ede4;
-  --bg-accent: #ead9c7;
+  --bg: #eef3fb;
+  --bg-accent: #dce8ff;
   --surface: #ffffff;
-  --surface-glass: rgba(255, 255, 255, 0.7);
-  --ink: #1f1a17;
-  --muted: #6d5f54;
-  --accent: #c5652a;
-  --accent-strong: #8a3f18;
-  --accent-alt: #2f6655;
-  --stroke: rgba(31, 26, 23, 0.12);
-  --shadow: 0 30px 60px -45px rgba(31, 26, 23, 0.6);
-  --font-display: "Baskerville", "Garamond", "Songti SC", "STSong", serif;
-  --font-body: "Avenir Next", "PingFang SC", "Hiragino Sans GB",
-    "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  --surface-glass: rgba(255, 255, 255, 0.82);
+  --ink: #14213d;
+  --muted: #5d6b86;
+  --accent: #4b78ff;
+  --accent-strong: #1e40af;
+  --accent-alt: #264ea8;
+  --stroke: rgba(20, 33, 61, 0.12);
+  --shadow: 0 24px 70px -42px rgba(15, 23, 42, 0.38);
+  --font-display: "Avenir Next", "PingFang SC", "Segoe UI", sans-serif;
+  --font-body: "Avenir Next", "PingFang SC", "Segoe UI", sans-serif;
 }
 
 * {
@@ -29,16 +28,16 @@ body {
   color: var(--ink);
   background-color: var(--bg);
   background-image: radial-gradient(
-      circle at 15% 20%,
-      rgba(197, 101, 42, 0.18),
+      circle at 10% 10%,
+      rgba(75, 120, 255, 0.18),
       transparent 55%
     ),
     radial-gradient(
       circle at 80% 10%,
-      rgba(47, 102, 85, 0.14),
+      rgba(37, 99, 235, 0.12),
       transparent 50%
     ),
-    linear-gradient(120deg, #f6efe6 0%, #f2e7db 45%, #f5efe6 100%);
+    linear-gradient(180deg, #f8fbff 0%, #eef3fb 100%);
   position: relative;
   isolation: isolate;
 }
@@ -58,7 +57,7 @@ body::before {
   right: -140px;
   background: radial-gradient(
     circle,
-    rgba(197, 101, 42, 0.35),
+    rgba(75, 120, 255, 0.28),
     transparent 70%
   );
 }
@@ -70,7 +69,7 @@ body::after {
   left: -160px;
   background: radial-gradient(
     circle,
-    rgba(47, 102, 85, 0.28),
+    rgba(37, 99, 235, 0.18),
     transparent 72%
   );
 }
@@ -89,9 +88,7 @@ button {
 }
 
 .landing {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 2.75rem 1.5rem 4.5rem;
+  padding: 0.25rem;
   display: flex;
   flex-direction: column;
   gap: 3.5rem;
@@ -112,11 +109,9 @@ button {
 }
 
 .brand__name {
-  font-family: var(--font-display);
   font-size: 1.4rem;
   font-weight: 600;
   letter-spacing: 0.12em;
-  text-transform: uppercase;
 }
 
 .brand__tagline {
@@ -170,7 +165,7 @@ button {
 .lang-switch button.active {
   background: var(--accent);
   color: #ffffff;
-  box-shadow: 0 12px 30px -22px rgba(197, 101, 42, 0.9);
+  box-shadow: 0 12px 30px -22px rgba(75, 120, 255, 0.9);
 }
 
 .hero {
@@ -185,15 +180,14 @@ button {
   align-items: center;
   padding: 0.3rem 0.75rem;
   border-radius: 999px;
-  background: rgba(47, 102, 85, 0.12);
-  color: #275245;
+  background: rgba(75, 120, 255, 0.12);
+  color: #264ea8;
   text-transform: uppercase;
   font-size: 0.75rem;
   letter-spacing: 0.14em;
 }
 
 .hero h1 {
-  font-family: var(--font-display);
   font-size: clamp(2.4rem, 3.4vw, 3.6rem);
   margin: 0.8rem 0 0.6rem;
   letter-spacing: -0.02em;
@@ -225,7 +219,7 @@ button {
 .button.primary {
   background: var(--accent);
   color: #ffffff;
-  box-shadow: 0 16px 40px -25px rgba(197, 101, 42, 0.85);
+  box-shadow: 0 16px 40px -25px rgba(75, 120, 255, 0.85);
 }
 
 .button.primary:hover {
@@ -304,7 +298,6 @@ button {
 }
 
 .stat__value {
-  font-family: var(--font-display);
   font-size: 2rem;
 }
 
@@ -321,7 +314,6 @@ button {
 }
 
 .section-head h2 {
-  font-family: var(--font-display);
   font-size: 2rem;
   margin: 0;
 }
@@ -367,8 +359,8 @@ button {
 .step {
   padding: 1.4rem;
   border-radius: 18px;
-  background: rgba(47, 102, 85, 0.08);
-  border: 1px solid rgba(47, 102, 85, 0.2);
+  background: rgba(75, 120, 255, 0.08);
+  border: 1px solid rgba(75, 120, 255, 0.18);
 }
 
 .step h3 {
@@ -386,17 +378,14 @@ button {
   border-radius: 26px;
   background: linear-gradient(
     135deg,
-    rgba(197, 101, 42, 0.18),
+    rgba(75, 120, 255, 0.16),
     rgba(255, 255, 255, 0.65)
   );
-  border: 1px solid rgba(197, 101, 42, 0.25);
+  border: 1px solid rgba(75, 120, 255, 0.2);
   box-shadow: var(--shadow);
 }
 
-.story-card h2 {
-  margin-top: 0;
-  font-family: var(--font-display);
-}
+.story-card h2 { margin-top: 0; }
 
 .story-card p {
   margin-bottom: 0;
@@ -418,7 +407,6 @@ button {
 
 .cta-card h2 {
   margin: 0 0 0.5rem;
-  font-family: var(--font-display);
   font-size: 1.7rem;
 }
 
@@ -469,7 +457,7 @@ button {
 
 @media (max-width: 600px) {
   .landing {
-    padding: 2rem 1.25rem 3.5rem;
+    padding: 0;
   }
 
   .hero__actions {

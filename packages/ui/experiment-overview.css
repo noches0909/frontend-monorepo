@@ -1,0 +1,40 @@
+.experiment-overview {
+  width: 100%;
+}
+
+.experiment-overview__hero {
+  padding: 28px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #14254e 0%, #264ea8 100%);
+  color: #f8fbff;
+}
+
+.experiment-overview__hero .ant-typography,
+.experiment-overview__hero .ant-typography p {
+  color: inherit;
+}
+
+.experiment-overview__eyebrow {
+  display: inline-flex;
+  margin-bottom: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.experiment-overview__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.experiment-overview__card {
+  border-radius: 20px;
+}
+
+.experiment-overview__stack {
+  width: 100%;
+}

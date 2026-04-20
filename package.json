@@ -1,9 +1,10 @@
 {
-  "name": "frontend-monorepo",
+  "name": "monorepo-lab",
   "private": true,
   "packageManager": "pnpm@10.0.0",
   "scripts": {
-    "dev": "pnpm --filter @acme/next-app dev",
+    "dev:next": "pnpm --filter @acme/next-app dev",
+    "dev:react": "pnpm --filter @acme/react-app dev",
     "build": "pnpm --filter @acme/next-app build",
     "start": "pnpm --filter @acme/next-app start",
     "lint": "pnpm --filter @acme/next-app lint"
