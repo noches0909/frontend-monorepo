@@ -1,0 +1,77 @@
+.bar-scrollbar-card {
+  width: 100%;
+  padding: 22px;
+  border: 1px solid #d7e0ef;
+  border-radius: 18px;
+  background: #f8fbff;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+.bar-scrollbar-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+.bar-scrollbar-card__eyebrow {
+  margin: 0 0 6px;
+  color: #60708a;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.bar-scrollbar-card__title {
+  margin: 0;
+  color: #1f2a44;
+  font-size: 22px;
+  line-height: 1.25;
+}
+
+.bar-scrollbar-card__metric {
+  min-width: 96px;
+  padding: 10px 12px;
+  border: 1px solid #d7e0ef;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #516179;
+  text-align: center;
+}
+
+.bar-scrollbar-card__metric span {
+  display: block;
+  color: #3867ff;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.bar-scrollbar-card__metric small {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.bar-scrollbar-chart {
+  width: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 720px) {
+  .bar-scrollbar-card {
+    padding: 16px;
+  }
+
+  .bar-scrollbar-card__header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .bar-scrollbar-card__metric {
+    width: 100%;
+  }
+}

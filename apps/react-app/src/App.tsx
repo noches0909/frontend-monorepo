@@ -9,6 +9,7 @@ import {
 } from "@acme/ui";
 import { productBlueprint, projectCatalog } from "@acme/experiment-catalog";
 import { BrowserRouter, Link, Route, Routes, useLocation } from "react-router-dom";
+import BarScrollbarChart from "./components/BarScrollbarChart";
 import ModelComparison from "./components/ModelComparison";
 import SliderCaptchaComparisonPage from "./components/slider-captcha-comparison/SliderCaptchaComparisonPage";
 import "./App.css";
@@ -16,6 +17,7 @@ import "./App.css";
 const menuItems = [
   { key: "/", label: <Link to="/">实验总览</Link> },
   { key: "/model-comparison", label: <Link to="/model-comparison">模型对比实验</Link> },
+  { key: "/bar-scrollbar", label: <Link to="/bar-scrollbar">条形图滚动实验</Link> },
   {
     key: "/slider-captcha-comparison",
     label: <Link to="/slider-captcha-comparison">滑动验证码对比实验</Link>
@@ -74,6 +76,7 @@ function AppFrame() {
         <Routes>
           <Route path="/" element={<OverviewPage />} />
           <Route path="/model-comparison" element={<ModelComparisonPage />} />
+          <Route path="/bar-scrollbar" element={<BarScrollbarChart />} />
           <Route
             path="/slider-captcha-comparison"
             element={<SliderCaptchaComparisonPage />}
